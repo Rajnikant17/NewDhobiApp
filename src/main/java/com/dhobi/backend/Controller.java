@@ -75,10 +75,14 @@ spring.data.mongodb.database=test*/
         return serviceForLogin.serviceforlogin(mLogin);
     }
 
-    @GetMapping("/mongodb/dashboard/index")
+  /*  @GetMapping("/mongodb/dashboard/index")
     public MGettingDashBoardData mGettingDashBoardData() {
         serviceForDashBoard.serviceForDashBoard();
-        return serviceForDashBoard.serviceForDashBoard();
+        return serviceForDashBoard.serviceForDashBoard(); */
+  @GetMapping("/mongodb/dashboard/index")
+  public String mGettingDashBoardData() {
+      //serviceForDashBoard.serviceForDashBoard();
+      return "All is well";
         // return repository.findByCity(city);
        /* MDashBoard  mDashBoard=new MDashBoard();
         List<MForDashBoardViewpager> mForDashBoardViewpagerlist = new ArrayList<>();
