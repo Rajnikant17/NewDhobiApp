@@ -105,7 +105,7 @@ public class ServicesForRegistration {
             otp[i] = numbers.charAt(rndm_method.nextInt(numbers.length()));
         }
        // String randomotp = (String.valueOf(otp));
-        String randomotp = "56567";
+        String randomotp = "5656";
 
        /* try {
             HttpResponse<String> response = Unirest.post("https://control.msg91.com/api/sendotp.php")
