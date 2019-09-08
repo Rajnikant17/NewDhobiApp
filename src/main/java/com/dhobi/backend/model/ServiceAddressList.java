@@ -21,7 +21,7 @@ public class ServiceAddressList {
         if (mAddress.getAddress().isEmpty()) {
             //Executed when new AddressList is required;
             if (addressListRepository.count() == 0) {
-                mResponseAddress.setCode(500);
+                mResponseAddress.setCode(200);
                 mResponseAddress.setAddresslist(null);
             } else {
                 mResponseAddress.setCode(200);
