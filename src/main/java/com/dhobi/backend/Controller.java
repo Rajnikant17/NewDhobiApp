@@ -82,7 +82,7 @@ spring.data.mongodb.database=test*/
   @GetMapping("/mongodb/dashboard/index")
   public String mGettingDashBoardData() {
       //serviceForDashBoard.serviceForDashBoard();
-      return "All is  well";
+      return "Everything is  well";
         // return repository.findByCity(city);
        /* MDashBoard  mDashBoard=new MDashBoard();
         List<MForDashBoardViewpager> mForDashBoardViewpagerlist = new ArrayList<>();
