@@ -128,55 +128,124 @@ spring.data.mongodb.database=test*/
        @GetMapping("/mongodb/homepage/index")
         public MHomepage mGettinghomepagedData() {
         return servicesHomepage.servicesHomepage();
-      /*  MDataHomePage mDataHomePage=new MDataHomePage();
+       /* MDataHomePage mDataHomePage=new MDataHomePage();
         List<MForMensWear> mensWearList=new ArrayList<>();
         List<MForWomensWear> womensWearList=new ArrayList<>();
         List<MForOtherWear> otherWearList=new ArrayList<>();
         List<MMensWearQuestion> mensWearQuestionList=new ArrayList<>();
         List<MForWomensWearQuestion> womensWearQuestionList=new ArrayList<>();
         List<MForOtherWearQuestion> mForOtherWearQuestionList = new ArrayList<>();
-        MForMensWear mForMensWear=new MForMensWear();
-        MForWomensWear mForWomensWear=new MForWomensWear();
-        MForOtherWear mForOtherWear=new MForOtherWear();
-        MMensWearQuestion mMensWearQuestion = new MMensWearQuestion();
-        MForWomensWearQuestion mForWomensWearQuestion=new MForWomensWearQuestion();
-        MForOtherWearQuestion mForOtherWearQuestion=new MForOtherWearQuestion();
 
+           MForMensWear mForMensWear1=new MForMensWear();
+           MForMensWear mForMensWear2=new MForMensWear();
+           MForMensWear mForMensWear3=new MForMensWear();
+
+           MForWomensWear mForWomensWear1=new MForWomensWear();
+           MForWomensWear mForWomensWear2=new MForWomensWear();
+           MForWomensWear mForWomensWear3=new MForWomensWear();
+
+           MForOtherWear mForOtherWear1=new MForOtherWear();
+           MForOtherWear mForOtherWear2=new MForOtherWear();
+           MForOtherWear mForOtherWear3=new MForOtherWear();
+
+           MMensWearQuestion mMensWearQuestion = new MMensWearQuestion();
+           MMensWearQuestion mMensWearQuestion2 = new MMensWearQuestion();
+           MMensWearQuestion mMensWearQuestion3 = new MMensWearQuestion();
+
+           MForWomensWearQuestion mForWomensWearQuestion=new MForWomensWearQuestion();
+           MForWomensWearQuestion mForWomensWearQuestion2=new MForWomensWearQuestion();
+           MForWomensWearQuestion mForWomensWearQuestion3=new MForWomensWearQuestion();
+
+           MForOtherWearQuestion mForOtherWearQuestion=new MForOtherWearQuestion();
+           MForOtherWearQuestion mForOtherWearQuestion2=new MForOtherWearQuestion();
+           MForOtherWearQuestion mForOtherWearQuestion3=new MForOtherWearQuestion();
         //For MensWear
         mMensWearQuestion.setMensWearQuestions("Why you looking so dull today ?");
         mMensWearQuestion.setMensWearAnswer("Why you looking so dull today public static class ParentMyHandler extends ParentViewHolder public static class ChildMyHandler.");
-        mensWearQuestionList.add(mMensWearQuestion);
-        mForMensWear.setItemId("MPant1");
-        mForMensWear.setMensWeartitle("Pants");
-        mForMensWear.setPrice("10");
-        mForMensWear.setMensWearimageurl("imageurl");
-        mForMensWear.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
-        mForMensWear.setMensWearQuestionList(mensWearQuestionList);
-        mensWearList.add(mForMensWear);
 
-        //For WomensWear
+        mensWearQuestionList.add(mMensWearQuestion);
+        mForMensWear1.setItemId("MPant");
+           mForMensWear1.setMensWeartitle("Pants");
+           mForMensWear1.setPrice("10");
+           mForMensWear1.setMensWearimageurl("https://media-public.canva.com/MACNSuop1sg/1/screen_2x.jpg");
+           mForMensWear1.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForMensWear1.setMensWearQuestionList(mensWearQuestionList);
+
+           mForMensWear2.setItemId("MJeans");
+           mForMensWear2.setMensWeartitle("Jeans");
+           mForMensWear2.setPrice("15");
+           mForMensWear2.setMensWearimageurl("https://media-public.canva.com/MACNSuop1sg/1/screen_2x.jpg");
+           mForMensWear2.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForMensWear2.setMensWearQuestionList(mensWearQuestionList);
+
+           mForMensWear3.setItemId("MShirt");
+           mForMensWear3.setMensWeartitle("Shirt");
+           mForMensWear3.setPrice("20");
+           mForMensWear3.setMensWearimageurl("https://media-public.canva.com/MACNSuop1sg/1/screen_2x.jpg");
+           mForMensWear3.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForMensWear3.setMensWearQuestionList(mensWearQuestionList);
+           mensWearList.add(mForMensWear1);
+           mensWearList.add(mForMensWear2);
+           mensWearList.add(mForMensWear3);
+
+           //For WomensWear
         mForWomensWearQuestion.setWomensWearQuestions("Why you looking so dull today ?");
         mForWomensWearQuestion.setWomensWearAnswer("Why you looking so dull today public static class ParentMyHandler extends ParentViewHolder public static class ChildMyHandler.");
         womensWearQuestionList.add(mForWomensWearQuestion);
-        mForWomensWear.setItemId("WLeggins1");
-        mForWomensWear.setWomensWeartitle("Leggins");
-        mForWomensWear.setPrice("20");
-        mForWomensWear.setWomensWearimageurl("imageurl");
-        mForWomensWear.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
-        mForWomensWear.setWomensWearQuestionList(womensWearQuestionList);
-        womensWearList.add(mForWomensWear);
+          mForWomensWear1.setItemId("WJeans");
+           mForWomensWear1.setWomensWeartitle("Jeans");
+           mForWomensWear1.setPrice("10");
+           mForWomensWear1.setWomensWearimageurl("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
+           mForWomensWear1.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForWomensWear1.setWomensWearQuestionList(womensWearQuestionList);
+
+           mForWomensWear2.setItemId("WLeggins");
+           mForWomensWear2.setWomensWeartitle("Leggins");
+           mForWomensWear2.setPrice("20");
+           mForWomensWear2.setWomensWearimageurl("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
+           mForWomensWear2.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForWomensWear2.setWomensWearQuestionList(womensWearQuestionList);
+
+           mForWomensWear3.setItemId("WJacket");
+           mForWomensWear3.setWomensWeartitle("Leggins");
+           mForWomensWear3.setPrice("15");
+           mForWomensWear3.setWomensWearimageurl("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
+           mForWomensWear3.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForWomensWear3.setWomensWearQuestionList(womensWearQuestionList);
+        womensWearList.add(mForWomensWear1);
+           womensWearList.add(mForWomensWear2);
+           womensWearList.add(mForWomensWear3);
 
         //For OthersWear
         mForOtherWearQuestion.setOtherWearQuestions("Why you looking so dull today ?");
         mForOtherWearQuestion.setOtherWearAnswer("Why you looking so dull today public static class ParentMyHandler extends ParentViewHolder public static class ChildMyHandler.");
         mForOtherWearQuestionList.add(mForOtherWearQuestion);
-        mForOtherWear.setItemId("OBlanket1");
-        mForOtherWear.setOthersWeartitle("Blanket");
-        mForOtherWear.setPrice("25");
-        mForOtherWear.setOthersimageurl("imageurl");
-        mForOtherWear.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
-        mForOtherWear.setmForOtherWearQuestionList(mForOtherWearQuestionList);
-        otherWearList.add(mForOtherWear);
+        mForOtherWear1.setItemId("OBlanket");
+        mForOtherWear1.setOthersWeartitle("Blanket");
+        mForOtherWear1.setPrice("10");
+        mForOtherWear1.setOthersimageurl("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
+        mForOtherWear1.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+        mForOtherWear1.setmForOtherWearQuestionList(mForOtherWearQuestionList);
+
+           mForOtherWearQuestionList.add(mForOtherWearQuestion);
+           mForOtherWear2.setItemId("OBedsheet");
+           mForOtherWear2.setOthersWeartitle("Bed-Sheet");
+           mForOtherWear2.setPrice("15");
+           mForOtherWear2.setOthersimageurl("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
+           mForOtherWear2.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForOtherWear2.setmForOtherWearQuestionList(mForOtherWearQuestionList);
+
+           mForOtherWearQuestionList.add(mForOtherWearQuestion);
+           mForOtherWear3.setItemId("OPillow");
+           mForOtherWear3.setOthersWeartitle("Pillow");
+           mForOtherWear3.setPrice("20");
+           mForOtherWear3.setOthersimageurl("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
+           mForOtherWear3.setBasicdetails("Mallya hospital is located in the heart of the Bengaluru city and has grown over the year with substantial increase.");
+           mForOtherWear3.setmForOtherWearQuestionList(mForOtherWearQuestionList);
+
+          otherWearList.add(mForOtherWear1);
+           otherWearList.add(mForOtherWear2);
+           otherWearList.add(mForOtherWear3);
 
         mDataHomePage.setMensWearList(mensWearList);
         mDataHomePage.setWomensWearList(womensWearList);
