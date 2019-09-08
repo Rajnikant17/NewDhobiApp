@@ -76,11 +76,11 @@ spring.data.mongodb.database=test*/
         return serviceForLogin.serviceforlogin(mLogin);
     }
 
-   /* @GetMapping("/mongodb/dashboard/index")
+    @GetMapping("/mongodb/dashboard/index")
     public MGettingDashBoardData mGettingDashBoardData() {
         serviceForDashBoard.serviceForDashBoard();
-        return serviceForDashBoard.serviceForDashBoard(); */
-  @GetMapping("/mongodb/dashboard/index")
+        return serviceForDashBoard.serviceForDashBoard();
+ /* @GetMapping("/mongodb/dashboard/index")
   public MDashBoard mGettingDashBoardData() {
       //serviceForDashBoard.serviceForDashBoard();
         // return repository.findByCity(city);
@@ -103,7 +103,7 @@ spring.data.mongodb.database=test*/
         mDashBoard.setWomens_imageur("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
         mDashBoard.setMens_imageur("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
         mDashBoard.setmForDashBoardViewpagerlist(mForDashBoardViewpagerlist);
-        return dashBoardRepositries.save(mDashBoard);
+        return dashBoardRepositries.save(mDashBoard); */
 
     }
 
@@ -125,10 +125,10 @@ spring.data.mongodb.database=test*/
         return otpRepository.findLastSendOtpDocument(mob,1);
     } */
 
-        @GetMapping("/mongodb/homepage/index")
-        public MDataHomePage mGettinghomepagedData() {
-       // return servicesHomepage.servicesHomepage();
-        MDataHomePage mDataHomePage=new MDataHomePage();
+       @GetMapping("/mongodb/homepage/index")
+        public MHomepage mGettinghomepagedData() {
+        return servicesHomepage.servicesHomepage();
+      /*  MDataHomePage mDataHomePage=new MDataHomePage();
         List<MForMensWear> mensWearList=new ArrayList<>();
         List<MForWomensWear> womensWearList=new ArrayList<>();
         List<MForOtherWear> otherWearList=new ArrayList<>();
@@ -181,7 +181,7 @@ spring.data.mongodb.database=test*/
         mDataHomePage.setMensWearList(mensWearList);
         mDataHomePage.setWomensWearList(womensWearList);
         mDataHomePage.setOtherWearList(otherWearList);
-          return   homePageRepository.save(mDataHomePage);
+          return   homePageRepository.save(mDataHomePage); */
 
     }
    @PostMapping("/mongodb/payment")
