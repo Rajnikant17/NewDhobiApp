@@ -1,9 +1,6 @@
 package com.dhobi.backend;
 
-import com.dhobi.backend.Repository.HomePageRepository;
-import com.dhobi.backend.Repository.OtpRepository;
-import com.dhobi.backend.Repository.PaymentSummaryRepository;
-import com.dhobi.backend.Repository.Registrationrepository;
+import com.dhobi.backend.Repository.*;
 import com.dhobi.backend.model.*;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +36,10 @@ public class Controller {
     ServicesOrderHistory servicesOrderHistory;
     @Autowired
     ServiceUpdateProfile serviceUpdateProfile;
+    @Autowired
+    HomePageRepository homePageRepository;
+    @Autowired
+    DashBoardRepositries dashBoardRepositries;
 
     /*spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
@@ -75,16 +76,15 @@ spring.data.mongodb.database=test*/
         return serviceForLogin.serviceforlogin(mLogin);
     }
 
-  /*  @GetMapping("/mongodb/dashboard/index")
+   /* @GetMapping("/mongodb/dashboard/index")
     public MGettingDashBoardData mGettingDashBoardData() {
         serviceForDashBoard.serviceForDashBoard();
         return serviceForDashBoard.serviceForDashBoard(); */
   @GetMapping("/mongodb/dashboard/index")
-  public String mGettingDashBoardData() {
+  public MDashBoard mGettingDashBoardData() {
       //serviceForDashBoard.serviceForDashBoard();
-      return "Everything is  well";
         // return repository.findByCity(city);
-       /* MDashBoard  mDashBoard=new MDashBoard();
+        MDashBoard  mDashBoard=new MDashBoard();
         List<MForDashBoardViewpager> mForDashBoardViewpagerlist = new ArrayList<>();
         List<String> imageurlList = new ArrayList<>();
         imageurlList.add("https://media-public.canva.com/MADaFMAyVts/1/screen_2x.jpg");
@@ -103,7 +103,7 @@ spring.data.mongodb.database=test*/
         mDashBoard.setWomens_imageur("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
         mDashBoard.setMens_imageur("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
         mDashBoard.setmForDashBoardViewpagerlist(mForDashBoardViewpagerlist);
-        dashBoardRepositries.save(mDashBoard); */
+        return dashBoardRepositries.save(mDashBoard);
 
     }
 
@@ -126,9 +126,9 @@ spring.data.mongodb.database=test*/
     } */
 
         @GetMapping("/mongodb/homepage/index")
-        public MHomepage mGettinghomepagedData() {
-        return servicesHomepage.servicesHomepage();
-       /* MDataHomePage mDataHomePage=new MDataHomePage();
+        public MDataHomePage mGettinghomepagedData() {
+       // return servicesHomepage.servicesHomepage();
+        MDataHomePage mDataHomePage=new MDataHomePage();
         List<MForMensWear> mensWearList=new ArrayList<>();
         List<MForWomensWear> womensWearList=new ArrayList<>();
         List<MForOtherWear> otherWearList=new ArrayList<>();
@@ -181,7 +181,7 @@ spring.data.mongodb.database=test*/
         mDataHomePage.setMensWearList(mensWearList);
         mDataHomePage.setWomensWearList(womensWearList);
         mDataHomePage.setOtherWearList(otherWearList);
-          return   homePageRepository.save(mDataHomePage); */
+          return   homePageRepository.save(mDataHomePage);
 
     }
    @PostMapping("/mongodb/payment")
