@@ -106,12 +106,13 @@ public class ServicesForRegistration {
         }
         String randomotp = (String.valueOf(otp));
        // String randomotp = "5656";
+      //  611332
 
         try {
             HttpResponse<String> response = Unirest.post("https://control.msg91.com/api/sendotp.php")
                     .queryString("otp", randomotp)
                     .queryString("otp_length", 4)
-                    .queryString("sender", 611332)
+                    .queryString("sender", "Dhobic")
                     .queryString("mobile", mRegistration.mobileno)
                     .queryString("authkey", "218787AwB06Z8f5LF5b154944")
                     .asString();
