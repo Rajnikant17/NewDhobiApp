@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class Controller {
@@ -40,6 +41,18 @@ public class Controller {
     HomePageRepository homePageRepository;
     @Autowired
     DashBoardRepositries dashBoardRepositries;
+    @Autowired
+    CityListRepository cityListRepository;
+    @Autowired
+    MerchantListRepository merchantListRepository;
+    @Autowired
+    NewHomePageRepository newHomePageRepository;
+    @Autowired
+    ServicesCityList servicesCityList;
+    @Autowired
+    ServicesMerchantList servicesMerchantList;
+    @Autowired
+    ServicesNewHomePage servicesNewHomePage;
 
     /*spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
@@ -128,7 +141,7 @@ spring.data.mongodb.database=test*/
        @GetMapping("/mongodb/homepage/index")
         public MHomepage mGettinghomepagedData() {
         return servicesHomepage.servicesHomepage();
-       /* MDataHomePage mDataHomePage=new MDataHomePage();
+      /*  MDataHomePage mDataHomePage=new MDataHomePage();
         List<MForMensWear> mensWearList=new ArrayList<>();
         List<MForWomensWear> womensWearList=new ArrayList<>();
         List<MForOtherWear> otherWearList=new ArrayList<>();
@@ -253,7 +266,7 @@ spring.data.mongodb.database=test*/
           return   homePageRepository.save(mDataHomePage); */
 
     }
-   @PostMapping("/mongodb/payment")
+      @PostMapping("/mongodb/payment")
     public MResponsePayment servicesforPaymentSummary(@RequestBody MPayment mPayment)
     {
 
@@ -327,5 +340,228 @@ spring.data.mongodb.database=test*/
         mResponseProfile.setUsername(mRegistration.username);
         mResponseProfile.setMobileno(mRegistration.mobileno);
         return mResponseProfile;
+    }
+
+    @GetMapping("/mongodb/cityList")
+    public MCityList serviceForCityList()
+    {
+       return  servicesCityList.servicesCityList();
+//        List<MDataCityList> mDataCityListList =new ArrayList<>();
+//        MDataCityList mDataCityList1 =new MDataCityList();
+//        MDataCityList mDataCityList2 =new MDataCityList();
+//        MDataCityList mDataCityList3 =new MDataCityList();
+//        MDataCityList mDataCityList4 =new MDataCityList();
+//        MDataCityList mDataCityList5 =new MDataCityList();
+//        MDataCityList mDataCityList6 =new MDataCityList();
+//        MDataCityList mDataCityList7 =new MDataCityList();
+//        MDataCityList mDataCityList8 =new MDataCityList();
+//
+//        MLocality mLocality1=new MLocality();
+//        MLocality mLocality2=new MLocality();
+//        MLocality mLocality3=new MLocality();
+//        MLocality mLocality4=new MLocality();
+//        MLocality mLocality5=new MLocality();
+//        mLocality1.setLocalityId(1);
+//        mLocality1.setLocalityName("ChandniChowk");
+//        mLocality2.setLocalityId(2);
+//        mLocality2.setLocalityName("South Delhi");
+//        mLocality3.setLocalityId(3);
+//        mLocality3.setLocalityName("Dwarka");
+//        mLocality4.setLocalityId(4);
+//        mLocality4.setLocalityName("JanakPuri");
+//        mLocality5.setLocalityId(5);
+//        mLocality5.setLocalityName("Karol Bagh");
+//        List<MLocality> mLocalityList=new ArrayList<>();
+//        mLocalityList.add(mLocality1);
+//        mLocalityList.add(mLocality2);
+//        mLocalityList.add(mLocality3);
+//        mLocalityList.add(mLocality4);
+//        mLocalityList.add(mLocality5);
+//       // MDataCityList mDataCityList9 =new MDataCityList();
+//        mDataCityList1.setCityId(1);
+//        mDataCityList1.setCityName("Ambikapur");
+//        mDataCityList2.setCityId(2);
+//        mDataCityList2.setCityName("Ranchi");
+//        mDataCityList3.setCityId(3);
+//        mDataCityList3.setCityName("Bilaspur");
+//        mDataCityList4.setCityId(4);
+//        mDataCityList4.setCityName("Delhi");
+//        mDataCityList4.setmLocalitList(mLocalityList);
+//        mDataCityList5.setCityId(5);
+//        mDataCityList5.setCityName("Kolkata");
+//        mDataCityList6.setCityId(6);
+//        mDataCityList6.setCityName("Bhilai");
+//        mDataCityList7.setCityId(7);
+//        mDataCityList7.setCityName("Bokaro");
+//        mDataCityList8.setCityId(8);
+//        mDataCityList8.setCityName("Raipur");
+//
+//        //mDataCityList4.set
+//
+//        mDataCityListList.add(mDataCityList1);
+//        mDataCityListList.add(mDataCityList2);
+//        mDataCityListList.add(mDataCityList3);
+//        mDataCityListList.add(mDataCityList4);
+//        mDataCityListList.add(mDataCityList5);
+//        mDataCityListList.add(mDataCityList6);
+//        mDataCityListList.add(mDataCityList7);
+//        mDataCityListList.add(mDataCityList8);
+   //     return cityListRepository.saveAll(mDataCityListList);
+    }
+
+    @PostMapping("/mongodb/merchantList")
+    public MMerchantList serviceForMerchantList(@RequestBody MCityandLocality mCityandLocality)
+    {
+       return servicesMerchantList.servicesMerchantList(mCityandLocality);
+  //@RequestBody MCityandLocality mCityandLocality
+        // Ambikapur
+  //      MMerchantList mMerchantList=new MMerchantList();
+   //     List<MDataMerchant> mDataMerchantList =new ArrayList<>();
+
+//        MDataMerchant mDataMerchant =new MDataMerchant();
+//        mDataMerchant.setPartnersId("011");
+//        mDataMerchant.setPriority(1);
+//        mDataMerchant.setCityId(1);
+//        mDataMerchant.setLocalityId(121);
+//        mDataMerchant.setPartnersName("ApnaLaundary");
+//        mDataMerchant.setPartnersAddress("BauriPara, Ambikapur, Chattisgarh");
+//        mDataMerchant.setAvgNormalPrice(20.0);
+//        mDataMerchant.setAvgDryLaudaryPrice(70.0);
+//        mDataMerchant.setPartnersNumber("9191234563");
+//        mDataMerchantList.add(mDataMerchant);
+//
+//        mMerchantList.setCityId(1);
+//        mMerchantList.setLocalityId(121);
+//        mMerchantList.setmDataMerchants(mDataMerchantList);
+
+//        // Delhi
+//        MMerchantList mMerchantList=new MMerchantList();
+//        //Merchant 1
+//        List<MDataMerchant> mDataMerchantList =new ArrayList<>();
+//        MDataMerchant mDataMerchant =new MDataMerchant();
+//        mDataMerchant.setPartnersId("011");
+//        mDataMerchant.setPriority(1);
+//        mDataMerchant.setCityId(4);
+//        mDataMerchant.setLocalityId(421);
+//        mDataMerchant.setPartnersName("Easy Laundary");
+//        mDataMerchant.setPartnersAddress("BauriPara, Janakpuri, Delhi-8001");
+//        mDataMerchant.setAvgNormalPrice(20.0);
+//        mDataMerchant.setAvgDryLaudaryPrice(70.0);
+//        mDataMerchant.setPartnersNumber("919123456");
+//
+//        //Merchant 2
+//        MDataMerchant mDataMerchant1 =new MDataMerchant();
+//        mDataMerchant1.setPartnersId("012");
+//        mDataMerchant1.setPriority(1);
+//        mDataMerchant1.setCityId(4);
+//        mDataMerchant1.setLocalityId(421);
+//        mDataMerchant1.setPartnersName("Apna Dhobi");
+//        mDataMerchant1.setPartnersAddress("Gandhi Nagar, Dwarka, Delhi -4001");
+//        mDataMerchant1.setAvgNormalPrice(20.0);
+//        mDataMerchant1.setAvgDryLaudaryPrice(70.0);
+//        mDataMerchant1.setPartnersNumber("91912345");
+//
+//        mDataMerchantList.add(mDataMerchant);
+//        mDataMerchantList.add(mDataMerchant1);
+//        mMerchantList.setCityId(4);
+//        mMerchantList.setLocalityId(421);
+//        mMerchantList.setmDataMerchants(mDataMerchantList);
+//        return merchantListRepository.save(mMerchantList);
+    }
+
+    @PostMapping("/mongodb/newHomePage")
+    public NewMHomepage serviceForNewHomePage(@RequestBody MPartnerId mPartnerId)
+    {
+        //MMobileNo mMobileNo
+        return servicesNewHomePage.servicesNewHomePage(mPartnerId);
+//        NewMDataHomePage mDataHomePage=new NewMDataHomePage();
+//        mDataHomePage.setPartnersid("9191234563");
+//        List<NewMForMensWear> mensWearList=new ArrayList<>();
+//        List<NewMForWomensWear> womensWearList=new ArrayList<>();
+//        List<NewMForOtherWear> otherWearList=new ArrayList<>();
+//        List<MMensWearQuestion> mensWearQuestionList=new ArrayList<>();
+//        List<MForWomensWearQuestion> womensWearQuestionList=new ArrayList<>();
+//        List<MForOtherWearQuestion> mForOtherWearQuestionList = new ArrayList<>();
+//
+//        NewMForMensWear mForMensWear1=new NewMForMensWear();
+//        NewMForMensWear mForMensWear2=new NewMForMensWear();
+//        NewMForMensWear mForMensWear3=new NewMForMensWear();
+//
+//        NewMForWomensWear mForWomensWear1=new NewMForWomensWear();
+//        NewMForWomensWear mForWomensWear2=new NewMForWomensWear();
+//        NewMForWomensWear mForWomensWear3=new NewMForWomensWear();
+//
+//        NewMForOtherWear mForOtherWear1=new NewMForOtherWear();
+//        NewMForOtherWear mForOtherWear2=new NewMForOtherWear();
+//        NewMForOtherWear mForOtherWear3=new NewMForOtherWear();
+//
+//        ModelPriceDetails modelPriceDetails =new ModelPriceDetails();
+//        modelPriceDetails.setNormalCleanPrice("20");
+//        modelPriceDetails.setDryCleanPrice("70");
+//        modelPriceDetails.setNormalCleanDiscountedPrice("10");
+//        modelPriceDetails.setDryCleanDiscountedPrice("50");
+//        modelPriceDetails.setNormalIronPrice("7");
+//        modelPriceDetails.setSteamIronPrice("7");
+//        //For MensWear
+//        mForMensWear1.setItemId("MPant");
+//        mForMensWear1.setMensWeartitle("Pants");
+//        mForMensWear1.setMensWearimageurl("https://media-public.canva.com/MACNSuop1sg/1/screen_2x.jpg");
+//        mForMensWear1.setPriceDetails(modelPriceDetails);
+//
+//        mForMensWear2.setItemId("MJeans");
+//        mForMensWear2.setMensWeartitle("Jeans");
+//        mForMensWear2.setMensWearimageurl("https://media-public.canva.com/MACNSuop1sg/1/screen_2x.jpg");
+//        mForMensWear2.setPriceDetails(modelPriceDetails);
+//
+//        mForMensWear3.setItemId("MShirt");
+//        mForMensWear3.setMensWeartitle("Shirt");
+//        mForMensWear3.setPriceDetails(modelPriceDetails);
+//        mensWearList.add(mForMensWear1);
+//        mensWearList.add(mForMensWear2);
+//        mensWearList.add(mForMensWear3);
+//
+//        //For WomensWear
+//        mForWomensWear1.setItemId("WJeans");
+//        mForWomensWear1.setWomensWeartitle("Jeans");
+//        mForWomensWear1.setWomensWearimageurl("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
+//        mForWomensWear1.setPriceDetails(modelPriceDetails);
+//
+//        mForWomensWear2.setItemId("WLeggins");
+//        mForWomensWear2.setWomensWeartitle("Leggins");
+//        mForWomensWear2.setWomensWearimageurl("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
+//        mForWomensWear2.setPriceDetails(modelPriceDetails);
+//
+//        mForWomensWear3.setItemId("WJacket");
+//        mForWomensWear3.setWomensWeartitle("Leggins");
+//        mForWomensWear3.setWomensWearimageurl("https://media-public.canva.com/MADOYKqm69o/1/screen_2x.jpg");
+//        mForWomensWear3.setPriceDetails(modelPriceDetails);
+//        womensWearList.add(mForWomensWear1);
+//        womensWearList.add(mForWomensWear2);
+//        womensWearList.add(mForWomensWear3);
+//
+//        //For OthersWear
+//        mForOtherWear1.setItemId("OBlanket");
+//        mForOtherWear1.setOthersWeartitle("Blanket");
+//        mForOtherWear1.setOthersimageurl("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
+//        mForOtherWear1.setPriceDetails(modelPriceDetails);
+//
+//        mForOtherWear2.setItemId("OBedsheet");
+//        mForOtherWear2.setOthersWeartitle("Bed-Sheet");
+//        mForOtherWear2.setOthersimageurl("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
+//        mForOtherWear2.setPriceDetails(modelPriceDetails);
+//
+//        mForOtherWear3.setItemId("OPillow");
+//        mForOtherWear3.setOthersWeartitle("Pillow");
+//        mForOtherWear3.setOthersimageurl("https://media-public.canva.com/MACbEPEgI90/1/screen_2x.jpg");
+//        mForOtherWear3.setPriceDetails(modelPriceDetails);
+//
+//        otherWearList.add(mForOtherWear1);
+//        otherWearList.add(mForOtherWear2);
+//        otherWearList.add(mForOtherWear3);
+//
+//        mDataHomePage.setMensWearList(mensWearList);
+//        mDataHomePage.setWomensWearList(womensWearList);
+//        mDataHomePage.setOtherWearList(otherWearList);
+//        return   newHomePageRepository.save(mDataHomePage);
     }
 }

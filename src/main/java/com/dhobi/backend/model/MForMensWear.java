@@ -60,3 +60,4 @@ public class MForMensWear {
         this.mensWearQuestionList = mensWearQuestionList;
     }
 }
+
