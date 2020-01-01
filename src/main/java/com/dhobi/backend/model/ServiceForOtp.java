@@ -21,9 +21,15 @@ public class ServiceForOtp {
                 mOtpResponse.setCode(200);
                 mOtpResponse.setStatus(true);
                 MRegistration mRegistration=registrationrepository.findBymobilenoAndStatus(mOtp.mobileno,0);
-                mRegistration.registrationStatus=1;
-                registrationrepository.save(mRegistration);
-                return mOtpResponse;
+                if(mRegistration !=null) {
+                    mRegistration.registrationStatus = 1;
+                    registrationrepository.save(mRegistration);
+                    return mOtpResponse;
+                }
+                else
+                {
+                    return mOtpResponse;
+                }
             }
             else {
             mOtpResponse.setCode(500);

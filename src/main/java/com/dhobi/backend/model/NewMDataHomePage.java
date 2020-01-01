@@ -8,6 +8,8 @@ import java.util.List;
 public class NewMDataHomePage {
     @Id
     private    String partnersid;
+    private    String partnersContact;
+    private    Double minPriceForOrder;
     private   List<NewMForMensWear> mensWearList;
     private   List<NewMForWomensWear> womensWearList;
     private   List<NewMForOtherWear>  otherWearList;
@@ -18,6 +20,22 @@ public class NewMDataHomePage {
 
     public void setPartnersid(String partnersid) {
         this.partnersid = partnersid;
+    }
+
+    public String getPartnersContact() {
+        return partnersContact;
+    }
+
+    public void setPartnersContact(String partnersContact) {
+        this.partnersContact = partnersContact;
+    }
+
+    public Double getMinPriceForOrder() {
+        return minPriceForOrder;
+    }
+
+    public void setMinPriceForOrder(Double minPriceForOrder) {
+        this.minPriceForOrder = minPriceForOrder;
     }
 
     public List<NewMForMensWear> getMensWearList() {

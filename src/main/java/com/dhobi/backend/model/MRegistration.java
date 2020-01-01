@@ -14,6 +14,5 @@ public class MRegistration {
     public String id;
     public String username;
     public String mobileno;
-    public String password;
     public Integer registrationStatus;
 }

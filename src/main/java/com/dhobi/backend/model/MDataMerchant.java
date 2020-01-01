@@ -11,6 +11,7 @@ public class MDataMerchant {
     String   partnersAddress;
     Double   avgNormalPrice;
     Double   avgDryLaudaryPrice;
+    Double    deliveryCharge;
     String   partnersNumber;
 
     public String getPartnersId() {
@@ -75,6 +76,14 @@ public class MDataMerchant {
 
     public void setAvgDryLaudaryPrice(Double avgDryLaudaryPrice) {
         this.avgDryLaudaryPrice = avgDryLaudaryPrice;
+    }
+
+    public Double getDeliveryCharge() {
+        return deliveryCharge;
+    }
+
+    public void setDeliveryCharge(Double deliveryCharge) {
+        this.deliveryCharge = deliveryCharge;
     }
 
     public String getPartnersNumber() {

@@ -18,7 +18,8 @@ public class MPayment  {
     Boolean onlinePaymentMode;
     String deliverytime;
     String bookingtime;
-    List<MUserBookedItem> mUserBookedItemlist;
+   // List<MUserBookedItem> mUserBookedItemlist;
+   List<MForCart> mUserBookedItemlist;
     String UserAddress;
 
     public String  getId() {
@@ -94,11 +95,11 @@ public class MPayment  {
         this.bookingtime = bookingtime;
     }
 
-    public List<MUserBookedItem> getmUserBookedItemlist() {
+    public List<MForCart> getmUserBookedItemlist() {
         return mUserBookedItemlist;
     }
 
-    public void setmUserBookedItemlist(List<MUserBookedItem> mUserBookedItemlist) {
+    public void setmUserBookedItemlist(List<MForCart> mUserBookedItemlist) {
         this.mUserBookedItemlist = mUserBookedItemlist;
     }
 

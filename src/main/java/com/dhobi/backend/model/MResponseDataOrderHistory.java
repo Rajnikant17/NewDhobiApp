@@ -6,7 +6,8 @@ public class MResponseDataOrderHistory {
 
     String orderid;
     String bookingdate;
-    List<MUserBookedItem> mUserBookedItemlist;
+   // List<MUserBookedItem> mUserBookedItemlist;
+   List<MForCart> mUserBookedItemlist;
 
     public String getOrderid() {
         return orderid;
@@ -24,11 +25,11 @@ public class MResponseDataOrderHistory {
         this.bookingdate = bookingdate;
     }
 
-    public List<MUserBookedItem> getmUserBookedItemlist() {
+    public List<MForCart> getmUserBookedItemlist() {
         return mUserBookedItemlist;
     }
 
-    public void setmUserBookedItemlist(List<MUserBookedItem> mUserBookedItemlist) {
+    public void setmUserBookedItemlist(List<MForCart> mUserBookedItemlist) {
         this.mUserBookedItemlist = mUserBookedItemlist;
     }
 }
