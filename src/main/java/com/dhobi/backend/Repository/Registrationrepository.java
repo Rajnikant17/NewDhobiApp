@@ -12,7 +12,7 @@ public interface Registrationrepository extends MongoRepository<MRegistration,St
    @Query("{$and:[{ 'mobileno':?0},{ 'registrationStatus':?1}]}")
    public MRegistration findBymobilenoAndStatus(String mobileno,int registrationStatus);
 
-   @Query("{$and:[{ 'mobileno':?0},{ 'password':?1},{ 'registrationStatus':?2}]}")
-   public MRegistration findByMobileNoAndPassword(String mobileno, String password, int registrationStatus);
+   @Query("{$and:[{ 'mobileno':?0},{ 'registrationStatus':?1}]}")
+   public MRegistration findByMobileNoAndRegistrationStatus(String mobileno, int registrationStatus);
 
 }

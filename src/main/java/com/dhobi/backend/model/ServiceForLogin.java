@@ -20,7 +20,7 @@ public class ServiceForLogin {
     public MLoginResponse serviceforlogin(MLogin mLogin)
     {
         MLoginResponse mLogiResponse=new MLoginResponse();
-       MRegistration mRegistration  = registrationrepository.findByMobileNoAndPassword(mLogin.getMobileno(),mLogin.getPassword(),1);
+       MRegistration mRegistration  = registrationrepository.findByMobileNoAndRegistrationStatus(mLogin.getMobileno(),1);
        if(mRegistration != null)
        {
            sendOtP(mLogin.getMobileno());
