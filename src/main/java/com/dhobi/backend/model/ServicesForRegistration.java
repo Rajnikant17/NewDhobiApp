@@ -104,21 +104,22 @@ public class ServicesForRegistration {
             // Use of nextInt() as it is scanning the value as int
             otp[i] = numbers.charAt(rndm_method.nextInt(numbers.length()));
         }
-        String randomotp = (String.valueOf(otp));
-       // String randomotp = "5656";
+      //  String randomotp = (String.valueOf(otp));
+        String randomotp = "5656";
       //  611332
 
-        try {
-            HttpResponse<String> response = Unirest.post("https://control.msg91.com/api/sendotp.php")
-                    .queryString("otp", randomotp)
-                    .queryString("otp_length", 4)
-                    .queryString("sender", "Dhobic")
-                    .queryString("mobile", mRegistration.mobileno)
-                    .queryString("authkey", "218787AwB06Z8f5LF5b154944")
-                    .asString();
-        } catch (UnirestException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            HttpResponse<String> response = Unirest.post("https://control.msg91.com/api/sendotp.php")
+//                    .queryString("otp", randomotp)
+//                    .queryString("otp_length", 4)
+//                    .queryString("sender", "Dhobic")
+//                    .queryString("mobile", mRegistration.mobileno)
+//                    .queryString("authkey", "218787AwB06Z8f5LF5b154944")
+//                    .asString();
+//        } catch (UnirestException e) {
+//            e.printStackTrace();
+//        }
+
         //"917898130226"
         //  "?email=&template=&otp=otp1&otp_length=6&otp_expiry=&sender=%24senderid&message=Hi Rajni&mobile=918372965282&authkey=218787AwB06Z8f5LF5b154944")
         // .asString();
