@@ -486,7 +486,7 @@ spring.data.mongodb.database=test*/
  //       return merchantListRepository.save(mMerchantList);
     }
 
-    @GetMapping("/mongodb/newHomePage")
+    @PostMapping("/mongodb/newHomePage")
     public NewMHomepage serviceForNewHomePage(@RequestBody MPartnerId mPartnerId)
     {
         //@RequestBody MPartnerId mPartnerId
