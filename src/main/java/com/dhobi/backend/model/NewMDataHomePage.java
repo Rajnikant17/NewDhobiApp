@@ -10,6 +10,7 @@ public class NewMDataHomePage {
     private    String partnersid;
     private    String partnersContact;
     private    Double minPriceForOrder;
+    private    int minNoOfDaysForDelivey;
     private   List<NewMForMensWear> mensWearList;
     private   List<NewMForWomensWear> womensWearList;
     private   List<NewMForOtherWear>  otherWearList;
@@ -36,6 +37,14 @@ public class NewMDataHomePage {
 
     public void setMinPriceForOrder(Double minPriceForOrder) {
         this.minPriceForOrder = minPriceForOrder;
+    }
+
+    public int getMinNoOfDaysForDelivey() {
+        return minNoOfDaysForDelivey;
+    }
+
+    public void setMinNoOfDaysForDelivey(int minNoOfDaysForDelivey) {
+        this.minNoOfDaysForDelivey = minNoOfDaysForDelivey;
     }
 
     public List<NewMForMensWear> getMensWearList() {

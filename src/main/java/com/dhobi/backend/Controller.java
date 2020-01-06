@@ -419,7 +419,7 @@ spring.data.mongodb.database=test*/
 //        List<MDataMerchant> mDataMerchantList =new ArrayList<>();
 //
 //        MDataMerchant mDataMerchant =new MDataMerchant();
-//        mDataMerchant.setPartnersId("011");
+//        mDataMerchant.setPartnersId("9191234563");
 //        mDataMerchant.setPriority(1);
 //        mDataMerchant.setCityId(1);
 //        mDataMerchant.setLocalityId(121);
@@ -496,7 +496,8 @@ spring.data.mongodb.database=test*/
 //        NewMDataHomePage mDataHomePage=new NewMDataHomePage();
 //        mDataHomePage.setPartnersid("9191234563");
 //        mDataHomePage.setPartnersContact("91912345");
-//        mDataHomePage.setMinPriceForOrder(30.0);
+//        mDataHomePage.setMinPriceForOrder(70.0);
+//        mDataHomePage.setMinNoOfDaysForDelivey(5);
 //        List<NewMForMensWear> mensWearList=new ArrayList<>();
 //        List<NewMForWomensWear> womensWearList=new ArrayList<>();
 //        List<NewMForOtherWear> otherWearList=new ArrayList<>();
@@ -524,12 +525,36 @@ spring.data.mongodb.database=test*/
 //        NewMForOtherWear mForOtherWear5=new NewMForOtherWear();
 //
 //        ModelPriceDetails modelPriceDetails =new ModelPriceDetails();
-//        modelPriceDetails.setNormalCleanPrice("20");
-//        modelPriceDetails.setDryCleanPrice("70");
+//        modelPriceDetails.setNormalCleanPrice("15");
+//        modelPriceDetails.setDryCleanPrice("90");
 //        modelPriceDetails.setNormalCleanDiscountedPrice("10");
 //        modelPriceDetails.setDryCleanDiscountedPrice("50");
-//        modelPriceDetails.setNormalIronPrice("7");
-//        modelPriceDetails.setSteamIronPrice("7");
+//        modelPriceDetails.setNormalIronPrice("10");
+//        modelPriceDetails.setSteamIronPrice("6");
+//
+//        ModelPriceDetails modelPriceDetails1 =new ModelPriceDetails();
+//        modelPriceDetails1.setNormalCleanPrice("12");
+//        modelPriceDetails1.setDryCleanPrice("70");
+//        modelPriceDetails1.setNormalCleanDiscountedPrice("10");
+//        modelPriceDetails1.setDryCleanDiscountedPrice("50");
+//        modelPriceDetails1.setNormalIronPrice("12");
+//        modelPriceDetails1.setSteamIronPrice("7");
+//
+//        ModelPriceDetails modelPriceDetails2 =new ModelPriceDetails();
+//        modelPriceDetails2.setNormalCleanPrice("16");
+//        modelPriceDetails2.setDryCleanPrice("75");
+//        modelPriceDetails2.setNormalCleanDiscountedPrice("10");
+//        modelPriceDetails2.setDryCleanDiscountedPrice("50");
+//        modelPriceDetails2.setNormalIronPrice("15");
+//        modelPriceDetails2.setSteamIronPrice("6");
+//
+//        ModelPriceDetails modelPriceDetails3 =new ModelPriceDetails();
+//        modelPriceDetails3.setNormalCleanPrice("30");
+//        modelPriceDetails3.setDryCleanPrice("170");
+//        modelPriceDetails3.setNormalCleanDiscountedPrice("10");
+//        modelPriceDetails3.setDryCleanDiscountedPrice("50");
+//        modelPriceDetails3.setNormalIronPrice("11");
+//        modelPriceDetails3.setSteamIronPrice("9");
 //        //For MensWear
 //
 //        mForMensWear1.setItemId("MJeans");
@@ -540,32 +565,32 @@ spring.data.mongodb.database=test*/
 //        mForMensWear2.setItemId("MTshirt");
 //        mForMensWear2.setMensWeartitle("T-Shirt");
 //        mForMensWear2.setMensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568198632/t_shirt_vuqt8a.jpg");
-//        mForMensWear2.setPriceDetails(modelPriceDetails);
+//        mForMensWear2.setPriceDetails(modelPriceDetails1);
 //
 //        mForMensWear3.setItemId("MPant");
 //        mForMensWear3.setMensWeartitle("Pants");
 //        mForMensWear3.setMensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/w_600/v1568198191/pant_tehceu.jpg");
-//        mForMensWear3.setPriceDetails(modelPriceDetails);
+//        mForMensWear3.setPriceDetails(modelPriceDetails2);
 //
 //        mForMensWear4.setItemId("MShirt");
 //        mForMensWear4.setMensWeartitle("Shirt");
-//        mForMensWear4.setPriceDetails(modelPriceDetails);
+//        mForMensWear4.setPriceDetails(modelPriceDetails1);
 //
 //
 //        mForMensWear5.setItemId("MSweater");
 //        mForMensWear5.setMensWeartitle("Sweater");
 //        mForMensWear5.setMensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568204062/sweater_su8ask.jpg");
-//        mForMensWear5.setPriceDetails(modelPriceDetails);
+//        mForMensWear5.setPriceDetails(modelPriceDetails2);
 //
 //        mForMensWear6.setItemId("MBlajer");
 //        mForMensWear6.setMensWeartitle("Blajer");
 //        mForMensWear6.setMensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568199328/blajer_yncqlr.jpg");
-//        mForMensWear6.setPriceDetails(modelPriceDetails);
+//        mForMensWear6.setPriceDetails(modelPriceDetails3);
 //
 //        mForMensWear7.setItemId("MCoat");
 //        mForMensWear7.setMensWeartitle("Coat");
 //        mForMensWear7.setMensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568199137/coat_jbdtso.jpg");
-//        mForMensWear7.setPriceDetails(modelPriceDetails);
+//        mForMensWear7.setPriceDetails(modelPriceDetails3);
 //
 //        mensWearList.add(mForMensWear1);
 //        mensWearList.add(mForMensWear2);
@@ -580,7 +605,7 @@ spring.data.mongodb.database=test*/
 //        mForWomensWear1.setItemId("W-Tshirt");
 //        mForWomensWear1.setWomensWeartitle("T-Shirt");
 //        mForWomensWear1.setWomensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568199591/womenst_shirt_ndij0t.jpg");
-//        mForWomensWear1.setPriceDetails(modelPriceDetails);
+//        mForWomensWear1.setPriceDetails(modelPriceDetails1);
 //
 //        mForWomensWear2.setItemId("WJeans");
 //        mForWomensWear2.setWomensWeartitle("Jeans");
@@ -590,17 +615,17 @@ spring.data.mongodb.database=test*/
 //        mForWomensWear3.setItemId("WLeggins");
 //        mForWomensWear3.setWomensWeartitle("Leggins");
 //        mForWomensWear3.setWomensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/w_600/v1568200346/leggins_gbqb7r.jpg");
-//        mForWomensWear3.setPriceDetails(modelPriceDetails);
+//        mForWomensWear3.setPriceDetails(modelPriceDetails2);
 //
 //        mForWomensWear4.setItemId("WSaree");
 //        mForWomensWear4.setWomensWeartitle("Saree");
 //        mForWomensWear4.setWomensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/w_600/v1568201566/sarees_eoooqs.jpg");
-//        mForWomensWear4.setPriceDetails(modelPriceDetails);
+//        mForWomensWear4.setPriceDetails(modelPriceDetails3);
 //
 //        mForWomensWear5.setItemId("WJacket");
 //        mForWomensWear5.setWomensWeartitle("Jacket");
 //        mForWomensWear5.setWomensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/w_600/v1568204773/jacket_zejmoe.jpg");
-//        mForWomensWear5.setPriceDetails(modelPriceDetails);
+//        mForWomensWear5.setPriceDetails(modelPriceDetails3);
 //
 //        mForWomensWear6.setItemId("WTops");
 //        mForWomensWear6.setWomensWeartitle("Tops");
@@ -610,7 +635,7 @@ spring.data.mongodb.database=test*/
 //        mForWomensWear7.setItemId("WKurti");
 //        mForWomensWear7.setWomensWeartitle("Kurti");
 //        mForWomensWear7.setWomensWearimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568201096/kurtisnew_vghqp2.jpg");
-//        mForWomensWear7.setPriceDetails(modelPriceDetails);
+//        mForWomensWear7.setPriceDetails(modelPriceDetails2);
 //
 //        womensWearList.add(mForWomensWear1);
 //        womensWearList.add(mForWomensWear2);
@@ -624,12 +649,12 @@ spring.data.mongodb.database=test*/
 //        mForOtherWear1.setItemId("OBlanket");
 //        mForOtherWear1.setOthersWeartitle("Blanket");
 //        mForOtherWear1.setOthersimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568205060/blanket_bmrdvh.jpg");
-//        mForOtherWear1.setPriceDetails(modelPriceDetails);
+//        mForOtherWear1.setPriceDetails(modelPriceDetails3);
 //
 //        mForOtherWear2.setItemId("OBedsheet");
 //        mForOtherWear2.setOthersWeartitle("Bed-Sheet");
 //        mForOtherWear2.setOthersimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568202475/bed_sheet_rvkr7t.jpg");
-//        mForOtherWear2.setPriceDetails(modelPriceDetails);
+//        mForOtherWear2.setPriceDetails(modelPriceDetails2);
 //
 //        mForOtherWear3.setItemId("OPillow");
 //        mForOtherWear3.setOthersWeartitle("Pillow");
@@ -639,12 +664,12 @@ spring.data.mongodb.database=test*/
 //        mForOtherWear4.setItemId("OCurtains");
 //        mForOtherWear4.setOthersWeartitle("Curtains");
 //        mForOtherWear4.setOthersimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568202924/curtains_sbkace.jpg");
-//        mForOtherWear4.setPriceDetails(modelPriceDetails);
+//        mForOtherWear4.setPriceDetails(modelPriceDetails3);
 //
 //        mForOtherWear5.setItemId("OSofacover");
 //        mForOtherWear5.setOthersWeartitle("Sofacover");
 //        mForOtherWear5.setOthersimageurl("https://res.cloudinary.com/drbeg6afu/image/upload/v1568202811/sofacover_pguwwl.jpg");
-//        mForOtherWear5.setPriceDetails(modelPriceDetails);
+//        mForOtherWear5.setPriceDetails(modelPriceDetails2);
 //
 //        otherWearList.add(mForOtherWear1);
 //        otherWearList.add(mForOtherWear2);

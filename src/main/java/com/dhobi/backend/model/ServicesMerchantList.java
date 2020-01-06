@@ -10,8 +10,17 @@ public class ServicesMerchantList {
     MerchantListRepository merchantListRepository;
    public MMerchantList servicesMerchantList(MCityandLocality mCityandLocality)
    {
-       //5df4ff504fc16d1c61a57fb1
-      // return merchantListRepository.findById(mCityandLocality.getId());
-      return merchantListRepository.findMerchantByCityAndLocality(mCityandLocality.getCityId(),mCityandLocality.getLocalitytId());
+      MMerchantList mMerchantList=merchantListRepository.findMerchantByCityAndLocality(mCityandLocality.getCityId(),mCityandLocality.getLocalitytId());
+      if(mMerchantList!=null)
+      {
+         return mMerchantList;
+      }
+      else
+      {
+         mMerchantList=new MMerchantList();
+         mMerchantList.setCityId(mCityandLocality.getCityId());
+         mMerchantList.setLocalityId(mCityandLocality.getLocalitytId());
+         return mMerchantList;
+      }
    }
 }
